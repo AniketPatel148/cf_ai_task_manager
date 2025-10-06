@@ -1,0 +1,16 @@
+{
+  "name": "cf_ai_task_manager",
+  "version": "1.0.0",
+  "description": "AI‑powered task manager built on Cloudflare Workers, Durable Objects and Workflows.",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240514.0",
+    "typescript": "^5.0.4"
+  }
+}

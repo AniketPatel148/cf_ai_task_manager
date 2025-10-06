@@ -1,0 +1,25 @@
+name = "cf_ai_task_manager"
+
+# This date should be set to the current date to opt in to the latest Workers runtime behavior.
+compatibility_date = "2025-10-06"
+
+# Entry point for the Worker script.
+main = "src/index.ts"
+
+# Bindings for Durable Objects.  Each object must be registered here.
+[[durable_objects]]
+binding = "TASK_MANAGER"
+class_name = "TaskManager"
+
+# Workers AI binding exposes env.AI
+[ai]
+binding = "AI"
+
+# Workflows binding.  The Worker can invoke this Workflow by name.
+[[workflows]]
+name = "task-workflow"
+binding = "TASK_WORKFLOW"
+class_name = "TaskWorkflow"
+
+# You must set your Cloudflare account ID when deploying.  Uncomment and fill in the value below.
+# account_id = "your_account_id_here"
